@@ -8,3 +8,8 @@ export:
 
 update:
     uv lock --upgrade-package=ruff
+
+commit OLD NEW:
+    git add uv.lock "{{ requirements }}"
+    git commit -m "chore: bump ruff from {{ OLD }} to {{ NEW }}" 
+
